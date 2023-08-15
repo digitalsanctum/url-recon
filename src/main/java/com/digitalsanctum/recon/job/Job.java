@@ -1,4 +1,4 @@
-package ai.reclaim.interview.job;
+package com.digitalsanctum.recon.job;
 
 import java.util.List;
 import java.util.Optional;

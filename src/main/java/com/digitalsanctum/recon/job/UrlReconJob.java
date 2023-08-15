@@ -1,6 +1,6 @@
-package ai.reclaim.interview.job;
+package com.digitalsanctum.recon.job;
 
-import ai.reclaim.interview.Utils;
+import com.digitalsanctum.recon.Utils;
 import com.microsoft.playwright.*;
 
 import java.io.IOException;
@@ -18,15 +18,12 @@ public class UrlReconJob implements Job {
     private final String jobName;
     private String slug = null;
 
-    private Path requestAuditFilePath = null;
-
     public UrlReconJob(String userId, String url) {
         this.userId = userId;
         this.url = url;
         this.jobName = this.getClass().getSimpleName();
         if (url != null) {
             this.slug = Utils.slugify(url);
-            this.requestAuditFilePath = Paths.get(this.userId, this.slug, "audit.txt");
         }
     }
 

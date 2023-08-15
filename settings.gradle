@@ -8,5 +8,4 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
-rootProject.name = 'be-recon'
-include('app')
+rootProject.name = 'url-recon'

@@ -1,6 +1,6 @@
-package ai.reclaim.interview;
+package com.digitalsanctum.recon;
 
-import ai.reclaim.interview.job.UrlReconJob;
+import com.digitalsanctum.recon.job.UrlReconJob;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -10,8 +10,6 @@ import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
-
-
 
         JobRunnerConfig jobRunnerConfig = new JobRunnerConfig(
                 100,
@@ -34,20 +32,16 @@ public class Main {
         );
 
 
-
         JobRunner runner = new JobRunnerThreadPoolExecutor(executor);
 
         final String userId = System.getProperty("user.name") + "_" + System.currentTimeMillis();
 
         Stream.of(
                         "https://yahoo.com",
-                        "https://digitalsanctum.com",
-                        "https://www.nytimes.com",
-                        "https://digitalsanctum.com/foo",
                         "https://news.ycombinator.com"
                 )
                 .flatMap(url -> Stream.of(
-                        // TODO config for UrlReconJob to toggle features
+                                // TODO config for UrlReconJob to toggle features
                                 new UrlReconJob(userId, url)
                         )
                 )

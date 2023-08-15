@@ -1,8 +1,17 @@
-# be-recon
+# url-recon
 
-A proof of concept for a multithreaded Java application which performs reconnaissance.
+A proof of concept for a multithreaded Java application which performs reconnaissance given a set of URLs.
 
-## goal
+The project leverages [Playwright](https://playwright.dev/java/).
 
-Create a multithreaded Java application which performs various operations on a given set of URLs. 
+## features
 
+* Download `index.html`
+* Take a screenshot and save it to a local file.
+* Download all JavaScript files.
+
+## build
+
+```shell
+./gradlew clean build
+```

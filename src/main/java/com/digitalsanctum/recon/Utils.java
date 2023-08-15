@@ -1,4 +1,4 @@
-package ai.reclaim.interview;
+package com.digitalsanctum.recon;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

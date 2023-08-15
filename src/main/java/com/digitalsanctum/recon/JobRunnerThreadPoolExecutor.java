@@ -1,6 +1,6 @@
-package ai.reclaim.interview;
+package com.digitalsanctum.recon;
 
-import ai.reclaim.interview.job.Job;
+import com.digitalsanctum.recon.job.Job;
 
 import java.util.List;
 import java.util.Optional;

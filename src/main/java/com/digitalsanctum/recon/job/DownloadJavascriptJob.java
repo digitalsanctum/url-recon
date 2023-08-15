@@ -1,6 +1,6 @@
-package ai.reclaim.interview.job;
+package com.digitalsanctum.recon.job;
 
-import ai.reclaim.interview.Utils;
+import com.digitalsanctum.recon.Utils;
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;

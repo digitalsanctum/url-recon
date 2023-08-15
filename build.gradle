@@ -1,0 +1,24 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.microsoft.playwright:playwright:1.36.0'
+    testImplementation("org.mockito:mockito-junit-jupiter:5.4.0")
+}
+
+testing {
+    suites {
+        test {
+            useJUnitJupiter('5.7.2')
+        }
+    }
+}
+
+application {
+    mainClass = 'com.digitalsanctum.recon.Main'
+}
