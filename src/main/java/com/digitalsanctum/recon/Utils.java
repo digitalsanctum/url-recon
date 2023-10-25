@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -57,9 +58,10 @@ public class Utils {
     }
 
     public static Optional<String> extractFileNameFromURL(String urlString) {
-        URL url = null;
+        URL url;
         try {
-            url = new URL(urlString);
+            URI uri = URI.create(urlString);
+            url = uri.toURL();
             String path = url.getPath();
             return Optional.of(path.substring(path.lastIndexOf('/') + 1));
         } catch (MalformedURLException e) {
